@@ -103,6 +103,7 @@ class ResumeController extends Controller
     public function update(Request $request, Resume $resume)
     {
         $data = $request->validate([
+            'skills' => 'nullable|array',
             'name' => 'required|string',
             'email' => 'required|email',
             'website' => 'nullable|url',

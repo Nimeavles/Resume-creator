@@ -14,6 +14,7 @@ class CreateResumesTable extends Migration
     public function up()
     {
         Schema::create('resumes', function (Blueprint $table) {
+            $table->json('skills')->nullable();
             $table->id();
             $table->timestamps();
             $table->foreignId('user_id');
